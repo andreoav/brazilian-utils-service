@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package api.cpf;
+
+option go_package = "cpf";
+
+message GenerateCPFRequest {};
+message GenerateCPFResponse { string result = 1; }
+
+service GenerateCPFService {
+  rpc GenerateCPF(GenerateCPFRequest) returns (GenerateCPFResponse) {}
+}
