@@ -15,7 +15,7 @@ This is the roadmap for the first release
 
 ## Preview
 
-<img src="./doc/preview.gif" />
+<img src="./docs/preview.gif" />
 
 ## License
 
