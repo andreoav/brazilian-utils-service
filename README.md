@@ -17,6 +17,8 @@ This is the roadmap for the first release
 
 <img src="./docs/preview.gif" />
 
+In this preview I'm using the awesome [BloomRPC](https://github.com/uw-labs/bloomrpc) as a GUI client to connect to the gRPC service.
+
 ## License
 
 [MIT](LICENSE)
