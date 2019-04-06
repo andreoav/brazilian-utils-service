@@ -12,6 +12,11 @@ This is the roadmap for the first release
 - [ ] CNPJ Validation
 - [ ] Tests
 
+
+## Preview
+
+<img src="./doc/preview.gif" />
+
 ## License
 
 [MIT](LICENSE)
