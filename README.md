@@ -10,6 +10,7 @@ This is the roadmap for the first release
 - [ ] CPF Validation
 - [ ] CNPJ Generation
 - [ ] CNPJ Validation
+- [ ] Tests
 
 ## License
 

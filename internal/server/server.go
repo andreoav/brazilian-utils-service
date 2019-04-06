@@ -1,7 +1,9 @@
 package server
 
 import (
+	"fmt"
 	"net"
+	"os"
 
 	"github.com/andreoav/brazilian-utils-service/pkg/generators/brutils"
 
@@ -13,7 +15,7 @@ import (
 )
 
 func Start() error {
-	listen, err := net.Listen("tcp", "localhost:50051")
+	listen, err := net.Listen("tcp", fmt.Sprintf("localhost:%s", os.Getenv("PORT")))
 
 	if err != nil {
 		return err
