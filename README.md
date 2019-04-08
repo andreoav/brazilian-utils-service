@@ -7,7 +7,7 @@ This project exposes Brazilian Utils as a gPRC Service using Go.
 This is the roadmap for the first release
 
 - [x] CPF Generation
-- [ ] CPF Validation
+- [x] CPF Validation
 - [ ] CNPJ Generation
 - [ ] CNPJ Validation
 - [ ] Tests
