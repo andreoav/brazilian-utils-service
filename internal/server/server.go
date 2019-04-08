@@ -3,7 +3,8 @@ package server
 import (
 	"net"
 
-	"github.com/andreoav/brazilian-utils-service/pkg/generators/brutils"
+	generator "github.com/andreoav/brazilian-utils-service/pkg/generators/brutils"
+	validator "github.com/andreoav/brazilian-utils-service/pkg/validators/brutils"
 
 	"github.com/andreoav/brazilian-utils-service/internal/transport"
 	"github.com/andreoav/brazilian-utils-service/pkg/api/cpf"
@@ -21,12 +22,12 @@ func Start() error {
 
 	s := grpc.NewServer()
 
-	// cpf.RegisterFormatServiceServer(s, &transport.FormatterService{
-	// 	Formatter: &formatter.CPFFormatter{},
-	// })
-
 	cpf.RegisterGenerateCPFServiceServer(s, &transport.GenerateCPFService{
-		Generator: &brutils.BrazilianUtilsCPFGenerator{},
+		Generator: &generator.BrazilianUtilsCPFGenerator{},
+	})
+
+	cpf.RegisterValidateCPFServiceServer(s, &transport.ValidateCPFService{
+		Validator: &validator.BrazilianUtilsCPFValidator{},
 	})
 
 	reflection.Register(s)
